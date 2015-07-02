@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<testsuite errors="0" failures="0" tests="2" name="from cppunit">
+  <testcase classname="TestBasicMath" name="testAddition"/>
+  <testcase classname="TestBasicMath" name="testMultiply"/>
+</testsuite>

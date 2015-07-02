@@ -1,0 +1,34 @@
+<property name="xsltproc.cmd" value="/usr/bin/xsltproc"/>
+02
+ 
+03
+...
+04
+...
+05
+...
+06
+ 
+07
+<target name="testdbCpp2junit"
+08
+      description="Convert cppunit test results to junit test results" >
+09
+  <echo>Tests run from  directory: ${build.native}/Test</echo>
+10
+  <exec dir="${build.native}/Test" executable="${xsltproc.cmd}" failonerror="true">
+11
+  <arg value="-o"/>
+12
+ 
+13
+  <arg value="test/data/junitTestBasicMathResults.xml"/>
+14
+  <arg value="cpp2junit.xslt"/>
+15
+  <arg value="cppTestBasicMathResults.xml"/>
+16
+  </exec>
+17
+</target>
+
